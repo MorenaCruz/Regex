@@ -3,7 +3,7 @@ and converts it to a more formal format that looks like this: (XXX) XXX-XXXX. Fi
 
 import re
 def convert_phone_number(phone):
-  result = re.sub(r"(\d{3})-(\d{3})-(\d{4}\b)", r"(\1)-\2-\3", phone)
+  result = re.sub(r"(\d{3})-(\d{3})-(\d{4}\b)", r"(\1) \2-\3", phone)
   return result
 
 print(convert_phone_number("My number is 212-345-9999.")) # My number is (212) 345-9999.
